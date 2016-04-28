@@ -11,6 +11,19 @@ android {
         versionCode 1
         versionName "1.0"
     }
+/*
+    productFlavors {
+        unitTest // Creates a new scope which wraps only unit tests
+    }*/
+
+    sourceSets {
+        unitTest {
+            java {
+                srcDir 'src/test/java' // New scope includes our unit test folder
+            }
+        }
+    }
+
     buildTypes {
         release {
             debuggable false
